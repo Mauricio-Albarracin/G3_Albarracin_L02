@@ -1,13 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        // Crear una instancia de Caja con tipo Integer y color Azul
-        Caja<Integer> cajaDeEnteros = new Caja<>(10, "Azul");
-        System.out.println("Contenido de la caja: " + cajaDeEnteros.obtenerContenido());
-        System.out.println("Color de la caja: " + cajaDeEnteros.obtenerColor());
+        // Crear una cajoneria
+        Cajoneria cajoneria = new Cajoneria();
 
-        // Crear una instancia de Caja con tipo String y color Rojo
-        Caja<String> cajaDeCadenas = new Caja<>("Hola Mundo", "Rojo");
-        System.out.println("Contenido de la caja: " + cajaDeCadenas.obtenerContenido());
-        System.out.println("Color de la caja: " + cajaDeCadenas.obtenerColor());
+        // Crear cajas con diferentes tipos de contenido y agregarlas a la cajoneria
+        Caja<Integer> cajaEnteros = new Caja<>(10, "Azul");
+        Caja<String> cajaCadenas = new Caja<>("Hola Mundo", "Rojo");
+        Caja<Double> cajaDecimales = new Caja<>(99.99, "Verde");
+
+        // Agregar cajas a la cajoneria
+        cajoneria.agregarCaja(cajaEnteros);
+        cajoneria.agregarCaja(cajaCadenas);
+        cajoneria.agregarCaja(cajaDecimales);
+
+        // Mostrar las cajas almacenadas en la cajoneria
+        System.out.println("Contenido de la Cajoneria:");
+        cajoneria.mostrarCajoneria();
     }
 }
