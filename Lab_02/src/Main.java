@@ -3,7 +3,7 @@ public class Main {
         Bolsa < Chocolatina > bolsaCho = new Bolsa < Chocolatina > (0);
         Chocolatina c = new Chocolatina("milka");
         Chocolatina c1 = new Chocolatina("milka");
-        Chocolatina c2 = new Chocolatina("ferrero");    
+        Chocolatina c2 = new Chocolatina("ferrero");  
         bolsaCho.add(c);
         bolsaCho.add(c1);
         bolsaCho.add(c2);
